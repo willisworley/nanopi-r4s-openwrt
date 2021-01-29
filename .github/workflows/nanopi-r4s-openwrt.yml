@@ -29,7 +29,8 @@ jobs:
     - name: Clone Source
       run: |
         cd "/home/runner"
-        git clone --branch "openwrt-18.06-k5.4" --single-branch "https://github.com/project-openwrt/openwrt" "openwrt"
+        rm -rf ./openwrt
+        git clone --branch "openwrt-18.06-k5.4" --single-branch "https://github.com/willisworley/openwrt" "openwrt"
         sudo chown -R runner:runner "openwrt"
         cd "/home/runner/openwrt"
         ./scripts/feeds update -a
@@ -97,7 +98,7 @@ jobs:
     - name: Clone Source
       run: |
         cd "/home/runner"
-        git clone --branch "master" --single-branch "https://github.com/project-openwrt/openwrt" "openwrt"
+        git clone --branch "master" --single-branch "https://github.com/willisworley/openwrt" "openwrt"
         sudo chown -R runner:runner "openwrt"
         cd "/home/runner/openwrt"
         ./scripts/feeds update -a
