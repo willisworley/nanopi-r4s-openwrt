@@ -29,7 +29,7 @@ jobs:
     - name: Clone Source
       run: |
         cd "/home/runner"
-        rm -rf ./openwrt
+        rm -rf "/home/runner/openwr*"
         git clone --branch "openwrt-18.06-k5.4" --single-branch "https://github.com/willisworley/openwrt" "openwrt"
         sudo chown -R runner:runner "openwrt"
         cd "/home/runner/openwrt"
