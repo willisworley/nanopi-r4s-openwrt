@@ -30,7 +30,7 @@ jobs:
       run: |
         cd "/home/runner"
         rm -rf "/home/runner/openwr*"
-        git clone --branch "openwrt-18.06-k5.4" --single-branch "https://github.com/willisworley/openwrt" "openwrt"
+        git clone --branch "openwrt-18.06-k5.4" --single-branch "https://github.com/willisworley/tianlingop" "openwrt"
         sudo chown -R runner:runner "openwrt"
         cd "/home/runner/openwrt"
         ./scripts/feeds update -a
@@ -98,7 +98,7 @@ jobs:
     - name: Clone Source
       run: |
         cd "/home/runner"
-        git clone --branch "master" --single-branch "https://github.com/willisworley/openwrt" "openwrt"
+        git clone --branch "master" --single-branch "https://github.com/willisworley/tianlingop" "openwrt"
         sudo chown -R runner:runner "openwrt"
         cd "/home/runner/openwrt"
         ./scripts/feeds update -a
